@@ -1,5 +1,6 @@
 # hello_logging
 
+A simple thread-safe logging library
 
 ## Build
 
