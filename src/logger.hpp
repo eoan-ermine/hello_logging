@@ -56,7 +56,7 @@ public:
     void Log(const Ts&... args) {
         std::scoped_lock lock{m_};
 
-        std::ofstream log_file_{GetFileName()};
+        std::ofstream log_file_{GetFileName(), std::ios::app};
 
         log_file_ << GetTimeStamp() << ": ";
         ((log_file_ << args), ...);
